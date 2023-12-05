@@ -1,0 +1,61 @@
+,Base Model,Fit Method,n_epoch,lr_max,div,patience,item_tfms,batch_tfms,F1 Score
+0,resnet50,fine_tune,50,None -> None,25,1,Resize(224),None,0.1527777761220932
+1,resnet50,fine_tune,50,None -> None,25,1,"Resize(224, pad_mode='zeros')",None,0.1388888955116272
+2,resnet50,fine_tune,50,None -> None,25,1,"Resize(450, pad_mode='zeros')",None,0.125
+3,resnet50,fine_tune,50,None -> None,25,1,"RandomResizedCrop(450, min_scale=0.75)",None,0.125
+4,resnet50,fine_tune,50,None -> None,25,1,Resize(224),aug_transforms(),0.0972222238779068
+5,resnet50,fine_tune,50,None -> None,25,1,"Resize(224, pad_mode='zeros')",aug_transforms(),0.0833333358168602
+6,resnet50,fine_tune,50,None -> None,25,1,"Resize(450, pad_mode='zeros')",aug_transforms(),0.1111111119389534
+7,resnet50,fine_tune,50,None -> None,25,1,"RandomResizedCrop(450, min_scale=0.75)",aug_transforms(),0.1527777761220932
+8,resnet50,fine_tune,50,None -> None,25,1,Resize(224),"[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.0416666679084301
+9,resnet50,fine_tune,50,None -> None,25,1,"Resize(224, pad_mode='zeros')","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.0694444477558136
+10,resnet50,fine_tune,50,None -> None,25,1,"Resize(450, pad_mode='zeros')","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.0555555559694767
+11,resnet50,fine_tune,50,None -> None,25,1,"RandomResizedCrop(450, min_scale=0.75)","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.0833333358168602
+12,resnet50,fit_one_cycle,50,None -> None,25,1,Resize(224),None,0.125
+13,resnet50,fit_one_cycle,50,None -> None,25,1,"Resize(224, pad_mode='zeros')",None,0.1527777761220932
+14,resnet50,fit_one_cycle,50,None -> None,25,1,"Resize(450, pad_mode='zeros')",None,0.1944444477558136
+15,resnet50,fit_one_cycle,50,None -> None,25,1,"RandomResizedCrop(450, min_scale=0.75)",None,0.2361111044883728
+16,resnet50,fit_one_cycle,50,None -> None,25,1,Resize(224),aug_transforms(),0.2638888955116272
+17,resnet50,fit_one_cycle,50,None -> None,25,1,"Resize(224, pad_mode='zeros')",aug_transforms(),0.2083333283662796
+18,resnet50,fit_one_cycle,50,None -> None,25,1,"Resize(450, pad_mode='zeros')",aug_transforms(),0.1111111119389534
+19,resnet50,fit_one_cycle,50,None -> None,25,1,"RandomResizedCrop(450, min_scale=0.75)",aug_transforms(),0.1944444477558136
+20,resnet50,fit_one_cycle,50,None -> None,25,1,Resize(224),"[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.2222222238779068
+21,resnet50,fit_one_cycle,50,None -> None,25,1,"Resize(224, pad_mode='zeros')","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.1527777761220932
+22,resnet50,fit_one_cycle,50,None -> None,25,1,"Resize(450, pad_mode='zeros')","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.1805555522441864
+23,resnet50,fit_one_cycle,50,None -> None,25,1,"RandomResizedCrop(450, min_scale=0.75)","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.1805555522441864
+24,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0014454397605732083,25,3,Resize(224),None,0.375
+25,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0014454397605732083,25,3,"Resize(224, pad_mode='zeros')",None,0.3472222089767456
+26,resnet50,fit_one_cycle,50,lr_find().valley -> 0.001737800776027143,25,3,"Resize(450, pad_mode='zeros')",None,0.3333333432674408
+27,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0006918309954926372,25,3,"RandomResizedCrop(450, min_scale=0.75)",None,0.3611111044883728
+28,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0063095735386013985,25,3,Resize(224),aug_transforms(),0.375
+29,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0030199517495930195,25,3,"Resize(224, pad_mode='zeros')",aug_transforms(),0.375
+30,resnet50,fit_one_cycle,50,lr_find().valley -> 0.002511886414140463,25,3,"Resize(450, pad_mode='zeros')",aug_transforms(),0.25
+31,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0014454397605732083,25,3,"RandomResizedCrop(450, min_scale=0.75)",aug_transforms(),0.3472222089767456
+32,resnet50,fit_one_cycle,50,lr_find().valley -> 0.00015848931798245758,25,3,Resize(224),"[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.7083333134651184
+33,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0012022644514217973,25,3,"Resize(224, pad_mode='zeros')","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.2777777910232544
+34,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0004786300996784121,25,3,"Resize(450, pad_mode='zeros')","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.4444444477558136
+35,resnet50,fit_one_cycle,50,lr_find().valley -> 0.00013182566908653826,25,3,"RandomResizedCrop(450, min_scale=0.75)","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.5694444179534912
+36,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0020892962347716093,10,3,Resize(224),None,0.3888888955116272
+37,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0014454397605732083,10,3,"Resize(224, pad_mode='zeros')",None,0.375
+38,resnet50,fit_one_cycle,50,lr_find().valley -> 0.00363078061491251,10,3,"Resize(450, pad_mode='zeros')",None,0.3333333432674408
+39,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0020892962347716093,10,3,"RandomResizedCrop(450, min_scale=0.75)",None,0.3333333432674408
+40,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0010000000474974513,10,3,Resize(224),aug_transforms(),0.3472222089767456
+41,resnet50,fit_one_cycle,50,lr_find().valley -> 0.001737800776027143,10,3,"Resize(224, pad_mode='zeros')",aug_transforms(),0.375
+42,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0014454397605732083,10,3,"Resize(450, pad_mode='zeros')",aug_transforms(),0.375
+43,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0010000000474974513,10,3,"RandomResizedCrop(450, min_scale=0.75)",aug_transforms(),0.375
+44,resnet50,fit_one_cycle,50,lr_find().valley -> 0.005248074419796467,10,3,Resize(224),"[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.4444444477558136
+45,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0014454397605732083,10,3,"Resize(224, pad_mode='zeros')","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.2777777910232544
+46,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0020892962347716093,10,3,"Resize(450, pad_mode='zeros')","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.3194444477558136
+47,resnet50,fit_one_cycle,50,lr_find().valley -> 0.001737800776027143,10,3,"RandomResizedCrop(450, min_scale=0.75)","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.4027777910232544
+48,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0005754399462603033,25,10,Resize(224),None,0.1666666716337204
+49,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0008317637839354575,25,10,"Resize(224, pad_mode='zeros')",None,0.2361111044883728
+50,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0006918309954926372,25,10,"Resize(450, pad_mode='zeros')",None,0.2222222238779068
+51,resnet50,fit_one_cycle,50,lr_find().valley -> 0.00363078061491251,25,10,"RandomResizedCrop(450, min_scale=0.75)",None,0.2222222238779068
+52,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0020892962347716093,25,10,Resize(224),aug_transforms(),0.25
+53,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0020892962347716093,25,10,"Resize(224, pad_mode='zeros')",aug_transforms(),0.1527777761220932
+54,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0010000000474974513,25,10,"Resize(450, pad_mode='zeros')",aug_transforms(),0.1527777761220932
+55,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0012022644514217973,25,10,"RandomResizedCrop(450, min_scale=0.75)",aug_transforms(),0.3055555522441864
+56,resnet50,fit_one_cycle,50,lr_find().valley -> 0.002511886414140463,25,10,Resize(224),"[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.2361111044883728
+57,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0006918309954926372,25,10,"Resize(224, pad_mode='zeros')","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.2361111044883728
+58,resnet50,fit_one_cycle,50,lr_find().valley -> 0.0063095735386013985,25,10,"Resize(450, pad_mode='zeros')","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.1111111119389534
+59,resnet50,fit_one_cycle,50,lr_find().valley -> 0.007585775572806597,25,10,"RandomResizedCrop(450, min_scale=0.75)","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.1805555522441864
