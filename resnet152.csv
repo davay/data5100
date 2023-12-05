@@ -1,0 +1,31 @@
+,Base Model,Fit Method,n_epoch,lr_max,div,patience,item_tfms,batch_tfms,F1 Score
+0,resnet152,fine_tune,50,None -> None,25,1,Resize(224),None,0.0833333358168602
+1,resnet152,fine_tune,50,None -> None,25,1,"Resize(224, pad_mode='zeros')",None,0.125
+2,resnet152,fine_tune,50,None -> None,25,1,Resize(224),aug_transforms(),0.0555555559694767
+3,resnet152,fine_tune,50,None -> None,25,1,"Resize(224, pad_mode='zeros')",aug_transforms(),0.1111111119389534
+4,resnet152,fine_tune,50,None -> None,25,1,Resize(224),"[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.0833333358168602
+5,resnet152,fine_tune,50,None -> None,25,1,"Resize(224, pad_mode='zeros')","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.0833333358168602
+6,resnet152,fit_one_cycle,50,None -> None,25,1,Resize(224),None,0.1527777761220932
+7,resnet152,fit_one_cycle,50,None -> None,25,1,"Resize(224, pad_mode='zeros')",None,0.1388888955116272
+8,resnet152,fit_one_cycle,50,None -> None,25,1,Resize(224),aug_transforms(),0.1666666716337204
+9,resnet152,fit_one_cycle,50,None -> None,25,1,"Resize(224, pad_mode='zeros')",aug_transforms(),0.1666666716337204
+10,resnet152,fit_one_cycle,50,None -> None,25,1,Resize(224),"[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.1527777761220932
+11,resnet152,fit_one_cycle,50,None -> None,25,1,"Resize(224, pad_mode='zeros')","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.0972222238779068
+12,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0020892962347716093,25,3,Resize(224),None,0.3472222089767456
+13,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0006918309954926372,25,3,"Resize(224, pad_mode='zeros')",None,0.2083333283662796
+14,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0012022644514217973,25,3,Resize(224),aug_transforms(),0.3611111044883728
+15,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0005754399462603033,25,3,"Resize(224, pad_mode='zeros')",aug_transforms(),0.3055555522441864
+16,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0005754399462603033,25,3,Resize(224),"[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.25
+17,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0012022644514217973,25,3,"Resize(224, pad_mode='zeros')","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.2777777910232544
+18,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0006918309954926372,10,3,Resize(224),None,0.2361111044883728
+19,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0005754399462603033,10,3,"Resize(224, pad_mode='zeros')",None,0.25
+20,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0006918309954926372,10,3,Resize(224),aug_transforms(),0.2222222238779068
+21,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0020892962347716093,10,3,"Resize(224, pad_mode='zeros')",aug_transforms(),0.2916666567325592
+22,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0012022644514217973,10,3,Resize(224),"[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.2777777910232544
+23,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0008317637839354575,10,3,"Resize(224, pad_mode='zeros')","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.2083333283662796
+24,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0010000000474974513,25,10,Resize(224),None,0.1944444477558136
+25,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0012022644514217973,25,10,"Resize(224, pad_mode='zeros')",None,0.1388888955116272
+26,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0020892962347716093,25,10,Resize(224),aug_transforms(),0.0972222238779068
+27,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0012022644514217973,25,10,"Resize(224, pad_mode='zeros')",aug_transforms(),0.1805555522441864
+28,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0010000000474974513,25,10,Resize(224),"[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.2083333283662796
+29,resnet152,fit_one_cycle,50,lr_find().valley -> 0.0005754399462603033,25,10,"Resize(224, pad_mode='zeros')","[*aug_transforms(size=224, max_warp=0.), Normalize.from_stats(*imagenet_stats)]",0.2083333283662796
